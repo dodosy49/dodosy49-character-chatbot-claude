@@ -1,0 +1,15 @@
+# 환경 설정 파일
+.env
+
+# Python 관련
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# 기타 IDE/툴 설정
+.idea/
