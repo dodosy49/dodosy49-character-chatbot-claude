@@ -1,69 +1,83 @@
-# Claude 기반 캐릭터 챗봇 (GPT + Flask 프로젝트)
 
-## 📌 프로젝트 소개
-Claude API를 활용한 웹 기반 캐릭터 챗봇 플랫폼입니다.  
-사용자는 일반 LLM과 대화하거나, 자신만의 캐릭터 챗봇을 생성하고 대화할 수 있습니다.  
-프론트엔드와 백엔드를 완전히 분리하여 SPA 구조로 구성했습니다.
+# Claude 기반 캐릭터 챗봇 (Vue + Flask 프로젝트)
+
+> 비개발자가 Claude API를 활용해 직접 구축한 캐릭터 챗봇 SaaS 구조의 실험 프로젝트입니다.
 
 ---
 
-## 🧰 사용 기술 스택
+## 📌 프로젝트 개요
 
-| 구분 | 기술 |
-|------|------|
-| 프론트엔드 | HTML5, CSS3, JavaScript, Markdown |
-| 백엔드 | Python 3.x, Flask |
-| API 연동 | Claude API (Anthropic) |
-| 기타 | VS Code, Live Server (로컬 테스트용) |
+- **Claude API**를 활용한 웹 기반 캐릭터 챗봇 플랫폼
+- 사용자는 직접 캐릭터를 생성하고, 설정한 프롬프트 기반으로 Claude와 대화 가능
+- **SPA 구조**로 프론트(Vue)와 백엔드(Flask)를 완전히 분리
 
 ---
 
-## 📂 프로젝트 구조
+## 🛠 사용 기술 스택
 
-```plaintexr
+| 구분        | 기술                                    |
+|-------------|-----------------------------------------|
+| 프론트엔드  | Vue 3, Vite, JavaScript, CSS (scoped)  |
+| 백엔드      | Python 3.x, Flask                       |
+| API 연동    | Claude API (Anthropic)                  |
+| 개발 환경   | VS Code, Git, Live Server               |
 
+---
+
+## 📁 프로젝트 구조
+
+```
 claude_chatbot/
-├── static_frontend/
-│ ├── css/
-│ │ └── style_chat.css
-│ ├── js/
-│ │ └── chat.js
-│ ├── chat.html
-│ ├── index.html
-│ └── ...
-├── app.py
-└── README.md
-
-
----
-
-## 💡 주요 기능
-
-- 기본 채팅: Claude API와 직접 대화
-- 캐릭터 챗 생성: 시스템 프롬프트 입력으로 캐릭터 정의
-- 캐릭터 챗 선택: 만든 캐릭터 중 하나를 선택해 대화
-- 마크다운 응답 처리 (`marked.js` 활용)
-- SPA 기반 구조 설계 (HTML + API 비동기 처리)
-- 모바일 접속을 고려한 구조로 확장 가능
-
----
-
-## 📷 화면 미리보기
-
-> ![index 화면](images/index_sample.png)
+├── backend/
+│   ├── app.py                    # Flask API 서버
+│   └── .env                      # Claude API 키 & URL 설정
+│
+├── frontend/
+│   ├── index.html
+│   ├── package.json              # Vue 프로젝트 설정
+│   ├── vite.config.js           # Vite 설정
+│   ├── README.md
+│   ├── public/
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── main.js               # 앱 진입점
+│   │   ├── App.vue               # 메인 App 컴포넌트
+│   │   ├── assets/               # 스타일 및 이미지
+│   │   │   ├── base.css
+│   │   │   ├── logo.svg
+│   │   │   ├── style_chat.css
+│   │   │   ├── style_create.css
+│   │   │   ├── style_index.css
+│   │   └── components/           # 주요 컴포넌트
+│   │       ├── CharacterForm.vue
+│   │       └── ChatPreview.vue
+│
+└── .gitignore
+```
 
 ---
 
-## 🛠 실행 방법 (개발용)
+## ✅ 구현 기능
 
-```bash
-# 1. 가상환경 설정 (옵션)
-python -m venv venv
-source venv/bin/activate  # 또는 venv\Scripts\activate
+- [x] Claude API 연동 및 POST 요청 처리
+- [x] 사용자 캐릭터 프롬프트 입력 → 미리보기 응답 반환
+- [x] 캐릭터 생성 화면 구성 (`CharacterForm.vue`)
+- [x] 미리보기 응답 컴포넌트 (`ChatPreview.vue`)
+- [ ] Stable Diffusion 이미지 삽입 기능 (구현 예정)
+- [ ] 채팅 UI 연결 + 시뮬레이션 기능 구현
 
-# 2. 패키지 설치
-pip install flask
+---
 
-# 3. 서버 실행
-python app.py
-http://127.0.0.1:5000 에서 확인 가능
+## 🧠 제작자 메모
+
+> "연휴 3일 동안 Vue와 Flask를 처음 배우며 구축한 Claude API 기반 캐릭터 챗봇 플랫폼입니다.  
+> 백엔드 연동, API 설계, 컴포넌트 분리까지 직접 해보며 개발자 실무 감각을 체험했습니다."
+
+---
+
+## 🚀 향후 계획
+
+- ✅ 캐릭터 생성 저장 기능 추가
+- ✅ Stable Diffusion 연동 테스트
+- ⏳ 실제 캐릭터 챗봇 대화 기능 구현
+- ⏳ GitHub Actions + 데모 배포 자동화
