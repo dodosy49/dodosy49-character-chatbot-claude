@@ -20,6 +20,8 @@ Claude API를 활용한 웹 기반 캐릭터 챗봇 플랫폼입니다.
 
 ## 📂 프로젝트 구조
 
+```plaintexr
+
 claude_chatbot/
 ├── static_frontend/
 │ ├── css/
@@ -48,7 +50,7 @@ claude_chatbot/
 
 ## 📷 화면 미리보기
 
-> ![index 화면](static_frontend/images/index_sample.png)
+> ![index 화면](images/index_sample.png)
 
 ---
 

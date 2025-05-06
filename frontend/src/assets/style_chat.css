@@ -1,0 +1,80 @@
+.body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+  max-width: 60%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  margin: 5px 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.user {
+    background-color: #e0e0e0;
+    align-self: flex-end;
+    margin-left: auto;
+    text-align: right;
+}
+
+.claude {
+    background-color: #ffffff;
+    align-self: flex-start;
+    margin-right: auto;
+    text-align: left;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.user-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+  height: 60px;
+}
+
+.send-btn {
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 0 20px;
+}
+
+/* Markdown 스타일링 */
+.claude h1 { font-size: 20px; margin-top: 10px; }
+.claude h2 { font-size: 18px; margin-top: 10px; }
+.claude ul { padding-left: 20px; margin-top: 5px; }
+.claude li { margin-bottom: 5px; }
+.claude strong { font-weight: bold; }
+.claude em { font-style: italic; }
+.claude pre {
+  background: #f0f0f0;
+  padding: 8px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+.claude code {
+  font-family: monospace;
+  background: #eee;
+  padding: 2px 4px;
+  border-radius: 4px;
+}

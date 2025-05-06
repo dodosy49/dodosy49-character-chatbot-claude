@@ -1,0 +1,56 @@
+
+/* 전체 좌우 분할 레이아웃 */
+.create-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* 왼쪽 캐릭터 설정 폼 */
+.form-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  
+  /* 공통 입력 라벨 및 필드 */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 16px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: sans-serif;
+    resize: vertical;
+  }
+
+/* 하단 저장 버튼 */
+  .save-button-area {
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .save-button-area button {
+    background-color: #69c;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
